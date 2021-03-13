@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Dashboard</title>
+</head>
+<body>
+    <!--Header showcase-->
+     <header id="showcase" class="grid">
+         <div class="bg-image">
+            <div class="content-wrap">
+             <h1> Aviation Safety Analysis</h1> 
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Possimus sequi vitae aliquam quasi exercitationem animi atque
+                repudiandae magni nihil unde?
+             </p>
+             <a href="" class="btn"> About Data</a>
+            </div> 
+         </div>
+     </header>
+
+    <!--Mainsection--> 
+    <main id="main">
+        <!--Section A-->
+        <section id="section-a" class="grid">
+            <div class="content-wrap">
+                <h2 class="content-title">Analysis & Predictions</h2>
+                <div class = "content-text"> 
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Accusantium non quisquam voluptates blanditiis magni necessitatibus obcaecati
+                    dolorem quis eveniet culpa hic, quibusdam tempore officiis ipsa itaque sed tempora placeat. Eligendi.
+                    </p>
+                </div>    
+            </div>
+        </section>
+        <!--Section B-->
+        <section id="section-b" class="grid">
+         <ul>
+             <li>
+                 <div class="card">
+                     <h3 class="content-title">Incident Prediction</h3>
+                     <br>
+                     <form action="{{ url_for('type_prediction') }}" method="post">
+                        <label for="Injury_Severity">Injury Severity:</label><br>
+                        <select id="inc_Sev" name="Injury_Severity"></select><br><br>
+                        <label for="Aircraft_damage">Aircraft damage:</label><br>
+                        <select id="inc_Damage" name="Aircraft_damage"></select><br><br>
+                        <label for="Fatal_Injury">Total Fatal Injury:</label>
+                        <input type="text" id="Fatal_Injury" name="Fatal_Injury"><br><br>
+                        <label for="Serious_Injury">Total Serious Injury:</label>
+                        <input type="text" id="Serious_Injury" name="Serious_Injury"><br><br>
+                        <label for="Minor_Injury">Total Minor Injury:</label>
+                        <input type="text" id="Minor_Injury" name="Minor_Injury"><br><br>
+                        <label for="Uninjured">Total Uninjured:</label>
+                        <input type="text" id="Uninjured" name="Uninjured"><br><br>
+                        <input type="submit" value="Submit">
+                     </form>
+                     <p><h4>The prediction is : {{type_predict}}</h4></p>
+                 </div>
+             </li>
+             <li>
+                <div class="card">
+                    <h3 class="content-title">Aircraft Damage Prediction</h3>
+                    <form action="{{ url_for('damage_prediction') }}" method="post">
+                       <label for="Injury_Severity">Injury Severity:</label><br>
+                       <select id="damage_Sev" name="Injury_Severity"></select><br><br>
+                       <label for="Aircraft_cat">Aircraft Category:</label><br>
+                       <select id="damage_Cat" name="Aircraft_cat"></select><br><br>
+                       <label for="Aircraft_make">Aircraft make:</label><br>
+                       <select id="damage_Make" name="Aircraft_make"></select><br><br>
+                       <label for="Fatal_Injury">Total Fatal Injury:</label>
+                       <input type="text" id="Fatal_Injury" name="Fatal_Injury"><br><br>
+                       <label for="Serious_Injury">Total Serious Injury:</label>
+                       <input type="text" id="Serious_Injury" name="Serious_Injury"><br><br>
+                       <label for="Minor_Injury">Total Minor Injury:</label>
+                       <input type="text" id="Minor_Injury" name="Minor_Injury"><br><br>
+                       <label for="Uninjured">Total Uninjured:</label>
+                       <input type="text" id="Uninjured" name="Uninjured"><br><br>
+                       <label for="Phase">Board Phase:</label><br>
+                       <select id="damage_Phase" name="Board_phase"></select><br><br>
+                       <input type="submit" value="Submit">
+                     </form>
+                     <p>The prediction is : {{damage_predict}}</p>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <h3 class="content-title">Acident Severity Prediction</h3>
+                    <form action="{{ url_for('severity_prediction') }}" method="post">
+                       <label for="Aircraft_damage">Aircraft damage:</label><br>
+                       <select id="sev_Damage" name="Aircraft_damage"></select><br><br>
+                       <label for="Aircraft_damage">Aircraft Category:</label><br>
+                       <select id="sev_Cat" name="Aircraft_Category"></select><br><br>
+                       <label for="Fatal_Injury">Total Fatal Injury:</label>
+                       <input type="text" id="Fatal_Injury" name="Fatal_Injury"><br><br>
+                       <label for="Serious_Injury">Total Serious Injury:</label>
+                       <input type="text" id="Serious_Injury" name="Serious_Injury"><br><br>
+                       <label for="Minor_Injury">Total Minor Injury:</label>
+                       <input type="text" id="Minor_Injury" name="Minor_Injury"><br><br>
+                       <label for="Uninjured">Total Uninjured:</label>
+                       <input type="text" id="Uninjured" name="Uninjured"><br><br>
+                       <label for="Board_phase">Board Phase:</label><br>
+                       <select id="sev_Phase" name="Board_phase"></select><br><br>
+                       <input type="submit" value="Submit">
+                     </form>
+                     <p>The prediction is : {{severity_predict}}</p>
+                </div>
+            </li>
+         </ul>   
+        </section>
+        <!--Section C-->
+        <section id="section-c" class="grid">
+            <div class="content-wrap">
+                <h2 class="content-title">Vizualization</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                   Accusantium non quisquam voluptates blanditiis magni necessitatibus obcaecati
+                   dolorem quis eveniet culpa hic, quibusdam tempore officiis ipsa itaque sed tempora placeat. Eligendi.
+                 </p>
+            </div>
+        </section>
+        <!--Section D-->
+        <section id="section-d" class="grid">
+            <div class="content-wrap">
+                <h2 class="content-title">Conatct Us</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                   Accusantium non quisquam voluptates blanditiis magni necessitatibus obcaecati
+                   dolorem quis eveniet culpa hic, quibusdam tempore officiis ipsa itaque sed tempora placeat. Eligendi.
+                 </p>
+            </div>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer id="main-footer" class="grid">
+        <div>Lorem ipsum dolor sit amet.</div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <script type=text/javascript src="static/js/dashboard.js"></script>
+</body>
+</html>
