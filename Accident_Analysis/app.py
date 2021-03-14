@@ -29,7 +29,7 @@ rf3, le_Injury_Severity3, le_Aircraft_Category3, le_Make3, le_Broad_Phase_of_Fli
 def welcome():
     return render_template('index.html')
 
-@app.route("/", methods=['POST'])
+@app.route("/type_prediction", methods=['POST'])
 def type_prediction():
     # # DEFINE SAMPLE NEW DATA
     Injury_Severity = request.form.get("Injury_Severity")
@@ -52,7 +52,7 @@ def type_prediction():
     # Decode the newly predicted value with target_encode
     y_type_prediction = target_encoder1.inverse_transform(y_predict_encoded)
 
-    return render_template('index.html', type_predict=y_type_prediction[0], show_predictions_modal=True)
+    return render_template('index.html', type_predict=y_type_prediction[0])
 
 @app.route("/severity_prediction", methods=['POST'])
 def severity_prediction():
