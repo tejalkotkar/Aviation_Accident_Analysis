@@ -27,7 +27,7 @@ p {
     text-decoration: none;
     padding: 1em 1em;
     border: 1px solid #666;
-    margin: .5em 0;
+    margin: 2.5em ;
 }
 
 .btn:hover{
@@ -43,7 +43,7 @@ p {
 #showcase .bg-image {
     position: absolute;
     background: #333;
-    background-image: url(pexels-kelly-lacy-4269517.jpg);
+    background-image: url(../Bkg_images/first_page.jpg);
     /* background-image: url(pexels-andrea-piacquadio-3769138.jpg); */
     background-position: center;
     background-repeat: no-repeat;
@@ -58,6 +58,14 @@ p {
     padding-top: 100px;
     padding-bottom: 0px;
 }
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    left: 256px;
+    text-decoration: none;
+    color: blanchedalmond;
+  }
 
 #showcase .content-wrap,
 #section-a .content-wrap {
@@ -89,25 +97,46 @@ p {
     background: white;
     color: #333;
 } 
-
+/* Section C */
 #section-c {
     background: white;
     color: #333;
     padding: 2em;
 }
-
+/* Section D */
 #section-d {
-    background: lightblue;
+    background: #85C1E9;
     color: #333;
-    padding: 2em;
+    padding: 1em 1em;
 }
+
+#section-d ul {
+  list-style: none;
+  margin: 0;
+  padding:0;
+}
+
+#section-d li {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  background: white;
+  color: #333;
+}
+
 
 #main-footer{
     padding: 2em;
     background: #000;
     color: white;
     text-align: center;
+    font-size: small;
 }
+
+.d-block{
+    width: 30%;
+    height: 30%;
+}
+
 
 @media(min-width: 700px) {
     .grid{
@@ -120,6 +149,10 @@ p {
         grid-column: 2/4;
     }
 
+    #section-d ul {
+      grid-column: 2/4;
+  }
+
     #section-a .content-text {
         columns: 2;
         column-gap: 2em;
@@ -130,9 +163,11 @@ p {
     }
 
     #main-footer div {
-        grid-column: span 2
+        grid-column: span 2;
     }
-    #section-b ul {
+
+    #section-b ul,
+    #section-d ul {
         display: flex;
         justify-content: space-around;
     }
@@ -140,6 +175,5 @@ p {
     #section-b li {
         width: 30%;
     }
-
 
 }
