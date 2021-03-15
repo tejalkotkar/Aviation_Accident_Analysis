@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="../static/css/style.css"> 
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="../static/css/carousel.css">
     <title>Dashboard</title>
 </head>
 <body>
@@ -12,12 +14,12 @@
      <header id="showcase" class="grid">
          <div class="bg-image">
             <div class="content-wrap">
-             <h1> Aviation Safety Analysis</h1> 
+             <h1> Aviation Accident Analysis</h1> 
              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Possimus sequi vitae aliquam quasi exercitationem animi atque
+                Possimus sequi vitae aliquam quasi exercitationem animi atque 
                 repudiandae magni nihil unde?
              </p>
-             <a href="" class="btn"> About Data</a>
+             <a href="abt_data.html" target="_blank" class="btn"> About Data</a>
             </div> 
          </div>
      </header>
@@ -43,70 +45,67 @@
                  <div class="card">
                      <h3 class="content-title">Incident Prediction</h3>
                      <br>
-                     <form action="{{ url_for('type_prediction') }}" method="post">
-                        <label for="Injury_Severity">Injury Severity:</label><br>
-                        <select id="inc_Sev" name="Injury_Severity"></select><br><br>
-                        <label for="Aircraft_damage">Aircraft damage:</label><br>
-                        <select id="inc_Damage" name="Aircraft_damage"></select><br><br>
+                     <form action="/action_page.php">
+                        <label for="Injury_Severity">Injury Severity:</label>
+                        <input type="text" id="Injury_Severity" name="Injury_Severity" required><br><br>
+                        <label for="Aircraft_damage">Aircraft damage:</label>
+                        <input type="text" id="Aircraft_damage" name="Aircraft_damage" required><br><br>
                         <label for="Fatal_Injury">Total Fatal Injury:</label>
-                        <input type="text" id="Fatal_Injury" name="Fatal_Injury"><br><br>
+                        <input type="text" id="Fatal_Injury" name="Fatal_Injury" required><br><br>
                         <label for="Serious_Injury">Total Serious Injury:</label>
-                        <input type="text" id="Serious_Injury" name="Serious_Injury"><br><br>
+                        <input type="text" id="Serious_Injury" name="Serious_Injury" required><br><br>
                         <label for="Minor_Injury">Total Minor Injury:</label>
-                        <input type="text" id="Minor_Injury" name="Minor_Injury"><br><br>
+                        <input type="text" id="Minor_Injury" name="Minor_Injury" required><br><br>
                         <label for="Uninjured">Total Uninjured:</label>
-                        <input type="text" id="Uninjured" name="Uninjured"><br><br>
-                        <input type="submit" value="Submit">
-                     </form>
-                     <p><h4>The prediction is : {{type_predict}}</h4></p>
+                        <input type="text" id="Uninjured" name="Uninjured" required><br><br>
+                        <input type="submit" value="Make Predication">
+                      </form>
                  </div>
              </li>
              <li>
                 <div class="card">
                     <h3 class="content-title">Aircraft Damage Prediction</h3>
-                    <form action="{{ url_for('damage_prediction') }}" method="post">
-                       <label for="Injury_Severity">Injury Severity:</label><br>
-                       <select id="damage_Sev" name="Injury_Severity"></select><br><br>
-                       <label for="Aircraft_cat">Aircraft Category:</label><br>
-                       <select id="damage_Cat" name="Aircraft_cat"></select><br><br>
-                       <label for="Aircraft_make">Aircraft make:</label><br>
-                       <select id="damage_Make" name="Aircraft_make"></select><br><br>
+                    <form action="/action_page.php">
+                       <label for="Injury_Severity">Injury Severity:</label>
+                       <input type="text" id="Injury_Severity" name="Injury_Severity" required><br><br>
+                       <label for="Aircraft_cat">Aircraft Category:</label>
+                       <input type="text" id="Aircraft_cat" name="Aircraft_cat" required><br><br>
+                       <label for="Aircraft_make">Aircraft make:</label>
+                       <input type="text" id="Aircraft_make" name="Aircraft_make" required><br><br>
                        <label for="Fatal_Injury">Total Fatal Injury:</label>
-                       <input type="text" id="Fatal_Injury" name="Fatal_Injury"><br><br>
+                       <input type="text" id="Fatal_Injury" name="Fatal_Injury" required><br><br>
                        <label for="Serious_Injury">Total Serious Injury:</label>
-                       <input type="text" id="Serious_Injury" name="Serious_Injury"><br><br>
+                       <input type="text" id="Serious_Injury" name="Serious_Injury" required><br><br>
                        <label for="Minor_Injury">Total Minor Injury:</label>
-                       <input type="text" id="Minor_Injury" name="Minor_Injury"><br><br>
+                       <input type="text" id="Minor_Injury" name="Minor_Injury" required><br><br>
                        <label for="Uninjured">Total Uninjured:</label>
-                       <input type="text" id="Uninjured" name="Uninjured"><br><br>
-                       <label for="Phase">Board Phase:</label><br>
-                       <select id="damage_Phase" name="Board_phase"></select><br><br>
-                       <input type="submit" value="Submit">
+                       <input type="text" id="Uninjured" name="Uninjured" required><br><br>
+                       <label for="Board_phase">Board Phase:</label>
+                       <input type="text" id="Board_phase" name="Board_phase" required><br><br>
+                       <input type="submit" value="Make Predication">
                      </form>
-                     <p>The prediction is : {{damage_predict}}</p>
                 </div>
             </li>
             <li>
                 <div class="card">
-                    <h3 class="content-title">Acident Severity Prediction</h3>
-                    <form action="{{ url_for('severity_prediction') }}" method="post">
-                       <label for="Aircraft_damage">Aircraft damage:</label><br>
-                       <select id="sev_Damage" name="Aircraft_damage"></select><br><br>
-                       <label for="Aircraft_damage">Aircraft Category:</label><br>
-                       <select id="sev_Cat" name="Aircraft_Category"></select><br><br>
+                    <h3 class="content-title">Accident Severity Prediction</h3>
+                    <form action="/action_page.php">
+                       <label for="Aircraft_damage">Aircraft damage:</label>
+                       <input type="text" id="Aircraft_damage" name="Aircraft_damage" required><br><br> 
+                       <label for="Aircraft_cat">Aircraft Category:</label>
+                       <input type="text" id="Aircraft_cat" name="Aircraft_cat" required><br><br>
                        <label for="Fatal_Injury">Total Fatal Injury:</label>
-                       <input type="text" id="Fatal_Injury" name="Fatal_Injury"><br><br>
+                       <input type="text" id="Fatal_Injury" name="Fatal_Injury" required><br><br>
                        <label for="Serious_Injury">Total Serious Injury:</label>
-                       <input type="text" id="Serious_Injury" name="Serious_Injury"><br><br>
+                       <input type="text" id="Serious_Injury" name="Serious_Injury" required><br><br>
                        <label for="Minor_Injury">Total Minor Injury:</label>
-                       <input type="text" id="Minor_Injury" name="Minor_Injury"><br><br>
+                       <input type="text" id="Minor_Injury" name="Minor_Injury" required><br><br>
                        <label for="Uninjured">Total Uninjured:</label>
-                       <input type="text" id="Uninjured" name="Uninjured"><br><br>
-                       <label for="Board_phase">Board Phase:</label><br>
-                       <select id="sev_Phase" name="Board_phase"></select><br><br>
-                       <input type="submit" value="Submit">
+                       <input type="text" id="Uninjured" name="Uninjured" required><br><br>
+                       <label for="Board_phase">Board Phase:</label>
+                       <input type="text" id="Board_phase" name="Board_phase" required><br><br>
+                       <input type="submit" value="Make Predication">
                      </form>
-                     <p>The prediction is : {{severity_predict}}</p>
                 </div>
             </li>
          </ul>   
@@ -114,34 +113,110 @@
         <!--Section C-->
         <section id="section-c" class="grid">
             <div class="content-wrap">
-                <h2 class="content-title">Vizualization</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                   Accusantium non quisquam voluptates blanditiis magni necessitatibus obcaecati
-                   dolorem quis eveniet culpa hic, quibusdam tempore officiis ipsa itaque sed tempora placeat. Eligendi.
-                 </p>
-            </div>
+                <h2 class="content-title">Vizualizations</h2>
+                <div class="carousel" data-flickity='{ "lazyLoad": true }'>
+                    <div class="carousel-cell">
+                      <a href="accident_distribution.html" target="_blank">
+                        <img class="carousel-cell-image"
+                        data-flickity-lazyload="Bkg_images/pexels-andrea-piacquadio-3769138.jpg" alt="tulip" />
+                      <div class="bottom-right">Accident Distribution</div>
+                      </a> 
+                    </div>
+                    <div class="carousel-cell">
+                      <a href="accidents_injuries.html" target="_blank"> 
+                        <img class="carousel-cell-image"
+                        data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/grapes.jpg" alt="grapes" />
+                        <div class="bottom-right">Injuries occured</div>
+                      </a>   
+                    </div>
+                    <div class="carousel-cell">
+                      <a href="make_model.html" target="_blank">   
+                        <img class="carousel-cell-image"
+                        data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/raspberries.jpg" alt="raspberries" />
+                        <div class="bottom-right">Aircraft Make & Model</div>
+                      </a>   
+                    </div>
+                    <div class="carousel-cell">
+                      <a href="accidents_purpose.html" target="_blank">  
+                        <img class="carousel-cell-image"
+                        data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/wolf.jpg" alt="wolf" />
+                        <div class="bottom-right">Flight Purpose</div>
+                      </a>  
+                    </div>
+                    <div class="carousel-cell">
+                      <a href="Damage_Phase.html" target="_blank">  
+                        <img class="carousel-cell-image"
+                        data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/shore.jpg" alt="sea" />
+                        <div class="bottom-right">Aircraft Damage & Board Phase of Flight</div>
+                      </a>  
+                    </div>
+                  </div>      
+            </div>  
         </section>
         <!--Section D-->
-        <section id="section-d" class="grid">
+        <section id="section-d">
             <div class="content-wrap">
                 <h2 class="content-title">Conatct Us</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                   Accusantium non quisquam voluptates blanditiis magni necessitatibus obcaecati
-                   dolorem quis eveniet culpa hic, quibusdam tempore officiis ipsa itaque sed tempora placeat. Eligendi.
-                 </p>
+                  <div class="projectcontributor">
+                    <div class="flip-box">
+                      <div class="flip-box-inner">
+                      <div class="flip-box-front">
+                          <img src="../static/Bkg_images/tejal.jpg" alt="Avatar">
+                      </div>
+                      <div class="flip-box-back">
+                        <b>Name: </b>Tejal Kotkar<br>
+                        <b>Email: </b>kotkar.tejal@gmail.com<br>
+                        <b>LinkedIn: </b><a target = "_blank" href="https://www.linkedin.com/in/tejal-kotkar/">Tejal Kotkar</a>
+                      </div>
+                      </div>
+                   </div>    
+                   <div class="flip-box">
+                      <div class="flip-box-inner">
+                      <div class="flip-box-front">
+                          <img src="../static/Bkg_images/savita.webp" alt="Avatar">
+                      </div>
+                      <div class="flip-box-back">
+                        <b>Name: </b>Savita Hirilall <br>
+                        <b>Email: </b>talktosavita@gmail.com <br>
+                        <b>LinkedIn: </b><a target = "_blank" href="https://www.linkedin.com/in/savita-hirilall-91297a118/">Savita Hirilall</a>
+                      </div>
+                      </div>
+                   </div>    
+                   <div class="flip-box">
+                      <div class="flip-box-inner">
+                      <div class="flip-box-front">
+                          <img src="../static/Bkg_images/hibo.jpg" alt="Avatar">
+                      </div>
+                      <div class="flip-box-back">
+                        <b>Name: </b>Hibo Dahir <br>
+                        <b>Email: </b>sdahir492@gmail.com <br>
+                        <b>LinkedIn: </b><a target = "_blank" href="https://www.linkedin.com/in/hibo-dahir-83786a155/">Hibo Dahir</a>
+                      </div>
+                      </div>
+                   </div>
+                   <div class="flip-box">
+                      <div class="flip-box-inner">
+                      <div class="flip-box-front">
+                          <img src="" alt="Avatar">
+                      </div>
+                      <div class="flip-box-back">
+                        <b>Name: </b>Tana Larson <br>
+                        <b>Email: </b>tana.larson4@outlook.com<br>
+                        <b>LinkedIn: </b><a target = "_blank" href="https://www.linkedin.com/in/tana-larson/">Tana Larson</a>
+                      </div>
+                      </div>
+                   </div>
+                  </div> 
             </div>
         </section>
     </main>
 
     <!--Footer-->
-    <footer id="main-footer" class="grid">
-        <div>Lorem ipsum dolor sit amet.</div>
+    <footer id="main-footer"  >
+        <div>Project Link <br>
+         Github:<a href="https://github.com/tejalkotkar/Aviation_Accident_Analysis", target="_blank">Project Aviation Saftey</a>
+        </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-    <script type=text/javascript src="static/js/dashboard.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>    
 </body>
 </html>
