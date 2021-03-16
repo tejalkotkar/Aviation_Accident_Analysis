@@ -18,4 +18,8 @@
     padding-top: 100px;
     padding-bottom: 0px;
     z-index: 0;
-}    
+}
+
+#section-b {
+    background-color: lightslategrey;
+}

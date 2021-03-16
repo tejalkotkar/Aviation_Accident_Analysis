@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="../static/css/accident_purpose.css">
-        <link rel="stylesheet" href="../static/css/d31styles.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/accident_purpose.css')}}">
+    <link rel="stylesheet" href="../static/css/d31styles.css">
     <title>Accidents by purpose of flight</title>
 </head>
 
@@ -26,8 +26,8 @@
             <div class="content-wrap">
                 <h2 class="content-title">Lorem, ipsum dolor sit </h2>
                 <div class="content-text">
-                    <p>  The highest serious injuries that occurred were due to 'Air Race/Show' and the investigation type was an accident
-                    </p>
+                    <p> Highest serious injuries occurred were due to 'Air Race/Show'.</p>
+                    <p> The investigation type was an accident </p>
                 </div>
             </div>
         </section>
@@ -38,11 +38,7 @@
                 <div class="content-text">
                       <!-- Plot for purposehere -->
                     <div class="purpose_plot"></div> 
-
-                    <!-- plot for map -->
-                   
-                </div>
-               
+                </div>   
             </div>
         </section>
     </main>
@@ -53,9 +49,8 @@
                 Aviation Saftey</a>
         </div>
     </footer>
-      <!-- <script src="https://d3js.org/d3.v4.js"></script> -->
       <script src="https://d3js.org/d3.v4.min.js"></script>
-      <script type='text/javascript' src='/Accident_Analysis/static/js/flightPurpose.js'></script>
+      <script type='text/javascript' src='static/js/flightPurpose.js'></script>
 </body>
 
 </html>

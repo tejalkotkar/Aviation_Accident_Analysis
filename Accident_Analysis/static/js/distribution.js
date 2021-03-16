@@ -53,7 +53,7 @@ svg.selectAll("mybar")
           .style("display", "inline-block")
           .html((d.Location) + "<br>"  + (d.Total_Fatal_Injuries) + '<br>' + (d.Investigation_Type));
     })
-    .on("mouseout", (d) => { tooltip.style("display", "display"); });
+    .on("mouseout", (d) => { tooltip.style("display", "none"); });
     svg.append("text")
     .attr("transform","rotate(-90)")
     .attr("y", 0 - margin.left + 15)

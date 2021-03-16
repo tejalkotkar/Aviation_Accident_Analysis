@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="../static/css/Damage_Phase.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/Damage_Phase.css')}}">
+    <link rel="stylesheet" href="../static/css/d3styles.css">
     <title>Aircraft Damage & Phase of Flight</title>
 </head>
 <body>
@@ -35,17 +36,9 @@
             <div class="content-wrap">
                 <h2 class="content-title">Vizualizations </h2>
                 <div class = "content-text"> 
-                    <div class="damage_plot">
+                    <div class="damage_plot" id="damage">
                         <!-- Plot will come here -->
                     </div>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Tempora architecto repudiandae iure minima ipsa consequatur minus, 
-                        optio maxime sequi voluptas soluta a, earum sit vero molestias. 
-                        Velit consequatur deleniti repudiandae?
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Accusantium non quisquam voluptates blanditiis magni necessitatibus obcaecati
-                        dolorem quis eveniet culpa hic, quibusdam tempore officiis ipsa itaque sed tempora placeat. Eligendi.
-                    </p>
                 </div>    
             </div>
         </section>
@@ -56,6 +49,8 @@
          Github:<a href="https://github.com/tejalkotkar/Aviation_Accident_Analysis", target="_blank">Project Aviation Saftey</a>
         </div>
     </footer>
-    
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <script type=text/javascript src="static/js/damage_phase.js"></script>
 </body>
 </html>

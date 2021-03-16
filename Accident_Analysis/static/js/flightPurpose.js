@@ -16,7 +16,7 @@ var svg = d3.select(".purpose_plot")
  var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
 // Parse the Data
-d3.csv("../static/Data/Final_Clean_AviationData_US.csv", function(data) {
+d3.csv("static/Data/Final_Clean_AviationData_US.csv", function(data) {
 
 
  // Add X axis
