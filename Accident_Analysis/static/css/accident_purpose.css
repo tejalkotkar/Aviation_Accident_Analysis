@@ -18,4 +18,8 @@
     padding-bottom: 0px;
     z-index: 0;
     color:white;
-}    
+}
+
+#section-b {
+    background-color: lightslategrey;
+}

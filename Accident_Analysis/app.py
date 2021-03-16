@@ -36,7 +36,7 @@ def type_prediction():
     Aircraft_Damage = request.form.get("Aircraft_damage")
     Total_Fatal_Injuries = request.form.get("Fatal_Injury")
     Total_Serious_Injuries = request.form.get("Serious_Injury")
-    Total_Minor_Injuries = request.form.get("Minor_Injury")	
+    Total_Minor_Injuries = request.form.get("Minor_Injury")
     Total_Uninjured = request.form.get("Uninjured")
 
     # Encode input values which are in string format
@@ -110,6 +110,33 @@ def damage_prediction():
     # rf, le_Injury_Severity, le_Aircraft_Category, le_Make, le_Broad_Phase_of_Flight, target_encoder
     return render_template('index.html', damage_predict=damage_y_prediction[0])
 
+@app.route("/abt_data")
+def abt_data():
+    return render_template('abt_data.html')
+
+@app.route("/accident_distribution")
+def accident_distribution():
+    return render_template('accident_distribution.html')
+
+@app.route("/accidents_injuries")
+def accidents_injuries():
+    return render_template('accidents_injuries.html')
+
+@app.route("/make_model")
+def make_model():
+    return render_template('make_model.html')
+
+@app.route("/accidents_purpose")
+def accidents_purpose():
+    return render_template('accidents_purpose.html')
+
+@app.route("/Damage_Phase")
+def Damage_Phase():
+    return render_template('Damage_Phase.html')
+
+@app.route("/map")
+def map():
+    return render_template('map.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
