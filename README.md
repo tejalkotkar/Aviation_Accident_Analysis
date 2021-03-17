@@ -10,7 +10,7 @@ Group members:
 #### Tools:
 
 This project is achieved by using:
-HTML, CSS, javascript combined with D3, Python Flask API, Jupyter Notebook, plotly, leaflet with mapbox
+HTML, CSS, JavaScript combined with D3, Python Flask API, Jupyter Notebook, Plotly, Leaflet with mapbox.
 
 #### Additional Libraries used:
 Additional JS Library : [flickity carousel](https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js)
@@ -40,13 +40,13 @@ Process followed starts with data cleanup. When was in cleanup process, we reali
 Hence decided to go with two data sets where one is the perfect data set and other data set with some unknowns. Idea behind was to see how much unknowns affect the models.
 
 To start with we picked up the two Machine Learning Algorithms, named Logistic Regression and Random Forest Regreesion to predict below 3 aspects:
-1. Type of Incident - Whether the event happend will be categorized as Incident or Accident.
+1. Type of Investigation - Whether the event happend will be categorized as Incident or Accident.
 2. Aircraft Damage - How severe the Aircraft damage will be. Will it be Minor, Substancial or Destroyed.
 3. Severity of Incident - How much severe the event will be from Fatal , Non-Fatal or Incident.
 
 For each of these predictions we ran both Logistic and Random Forest Regreesion on both the data sets. We could see from results that the data set with perfect data has much more better model.
 Now from using perfect data set, we chose the model which gave us better Accuracy and finally used that best model for predictions. Models with accuracy below:
-1. Type of Incident: 
+1. Type of Investigation: 
     * Algorithm - Random Forest 
     * Accuracy - 93.54%
 
