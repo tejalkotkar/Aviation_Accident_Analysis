@@ -65,28 +65,28 @@ Now from using perfect data set, we chose the model which gave us better Accurac
 1. Distribution of Accidents in the United States.
     * Graph demonstrates accidents distribution by states. 
     * New york tops the chart with highest number of accidents. San Juan, Kauai, Oahu & Kauai islands have least number of accidents.
-![Distribution](Accident_Analysis/static/Bkg_images/distribution_img.PNG)
+![Distribution](static/Bkg_images/distribution_img.PNG)
 
 2. Top 10  Accidents by Highest Number of Injuries.
     * Graph demonstrates the top accidents by highest number of injuries and date, location & State of an accident.
     * San Fransisco's 2013 accident tops the chart reporting 190 injuries and 117 uninjured.
     * Knoxville's 2020 accident is at the bottom with 23 injured and 50 uninjured.
     * Accident happened in Jamaika in 2002 had reported highest number on uninjured which is 349
-![Injuries](Accident_Analysis/static/Bkg_images/injuries_img.PNG)
+![Injuries](static/Bkg_images/injuries_img.PNG)
 
 3. Aircraft Make & Model With Highest Number of Accidents.
     * More than 85% of accidents happend with an Airplane.
     * From Airplane manufactures Cessna tops with 45% accidents followed by Piper with 29% accidents.
     * To be specific on Cessna its a model 172 which is at the top with 43.4% accidents.
-![Injuries](Accident_Analysis/static/Bkg_images/Aircraft_make_model_img.PNG)
+![Injuries](static/Bkg_images/Aircraft_make_model_img.PNG)
 
 4. Accident Count by Purpose of Flight.
     * Highest serious injuries occurred were due to 'Air Race/Shows'.
     * The investigation type was an accident.
-![Purpose](Accident_Analysis/static/Bkg_images/purpose_img.PNG)
+![Purpose](static/Bkg_images/purpose_img.PNG)
 
 5. Accident Count with Respect to Aircraft Damage & Phase of Flight.
     * Aircraft had Substantial damages in around 24K accidents.
     * Maximum accidents are reported during the Landing phase of the flight approximately 8K.
-![Damage](Accident_Analysis/static/Bkg_images/damage_img.PNG)
-![Phase of Flight](Accident_Analysis/static/Bkg_images/damage_phase_img.PNG)
+![Damage](static/Bkg_images/damage_img.PNG)
+![Phase of Flight](static/Bkg_images/damage_phase_img.PNG)
