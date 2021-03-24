@@ -29,13 +29,17 @@
             <div class="content-wrap">
                 <h2 class="content-title">Analysis & Predictions</h2>
                 <div class = "content-text"> 
-                    <p>Post analyzing the data used Machine Learing Alogrithms Random forest and Logistic regression
-                       to find a best fit model for predictions. 
-                       These are the best Alogrithms applied to each predictions: <br>
-                      <b>Investigation Type Prediction: </b>Random forest <br>
-                      <b>Aircraft Damage Prediction: </b>Random forest <br>
-                       <b>Accident Severity: </b>Logistic regression 
-                   </p>
+                  <p>Flying has been the go-to mode of travel for years now; it is time-saving, affordable, and extremely convenient. 
+                    According to the FAA, 2,781,971 passengers fly every day in the US, as in June 2019. Passengers reckon that flying 
+                    is very safe, considering strict inspections are conducted and security measures are taken to avoid and/or mitigate
+                    any mishappenings. However, there remain a few chances of unfortunate incidents. 
+                    Machine learning Alogrithms Random forest and Logistic regression to find a best fit model for predicting 
+                    some of the aspects of an accident. 
+                    These are the best Alogrithms applied to each predictions: <br>
+                   <b>Investigation Type Prediction: </b>Random forest <br>
+                   <b>Aircraft Damage Prediction: </b>Random forest <br>
+                   <b>Accident Severity: </b>Logistic regression 
+                  </p>
                 </div>    
             </div>
         </section>
@@ -59,7 +63,7 @@
                         <input type="text" id="Minor_Injury" name="Minor_Injury" required><br><br>
                         <label for="Uninjured">Total Uninjured:</label>
                         <input type="text" id="Uninjured" name="Uninjured" required><br><br>
-                        <input type="submit" value="Make Predication">
+                        <input type="submit" class="button" value="Make Predication">
                       </form>
                       <p><h4>The prediction is : {{type_predict}}</h4></p>
                  </div>
@@ -84,7 +88,7 @@
                        <input type="text" id="Uninjured" name="Uninjured" required><br><br>
                        <label for="Board_phase">Board Phase:</label><br>
                        <select id="damage_Phase" name="Board_phase"></select><br><br>
-                       <input type="submit" value="Make Predication">
+                       <input type="submit" class="button" value="Make Predication">
                      </form>
                      <p><h4>The prediction is : {{damage_predict}}</h4></p>
                 </div>
@@ -107,7 +111,7 @@
                        <input type="text" id="Uninjured" name="Uninjured" required><br><br>
                        <label for="Board_phase">Board Phase:</label><br>
                        <select id="sev_Phase" name="Board_phase"></select><br><br>
-                       <input type="submit" value="Make Predication">
+                       <input type="submit" class="button" value="Make Predication">
                      </form>
                      <p><h4>The prediction is : {{severity_predict}}</h4></p>
 

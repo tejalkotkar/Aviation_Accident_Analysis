@@ -17,6 +17,8 @@ body { font-family: sans-serif; }
 
 .carousel-cell-image {
   display: block;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
   max-height: 100%;
   margin: 0 auto;
   max-width: 100%;
@@ -31,7 +33,7 @@ body { font-family: sans-serif; }
   opacity: 1;
 }
 
-
+/* Styling for Contact us section flip box */
 .flip-box {
   background-color: transparent;
   width: 300px;
